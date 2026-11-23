@@ -1,0 +1,192 @@
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Bootstrap Icons
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+// css tugas web personal zaky
+/* ===== Warna & font (ubah di sini) ===== */
+:root {
+  --bg: #eef3f4;
+  --surface: #ffffff;
+  --ink: #1b2b34;
+  --muted: #55686f;
+  --accent: #0f6b7a;
+  --accent-dark: #0a4f5b;
+  --line: #cfdadd;
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-dark); }
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ===== Navigasi ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem 6vw;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav nav { display: flex; gap: 1.5rem; }
+
+.nav nav a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.nav nav a:hover { color: var(--accent); }
+
+/* ===== Hero ===== */
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 7rem 6vw 5rem;
+}
+
+.hero-intro {
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0.25rem 0 1.25rem;
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  max-width: 34rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+/* ===== Bagian umum ===== */
+.section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3.5rem 6vw;
+  border-top: 1px solid var(--line);
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.section p { max-width: 38rem; }
+
+/* ===== Keahlian ===== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  margin-top: 1.25rem;
+}
+
+.skills li {
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  font-size: 0.95rem;
+}
+
+/* ===== Proyek ===== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.4rem;
+}
+
+.project h3 { margin-bottom: 0.5rem; }
+
+.project p {
+  color: var(--muted);
+  font-size: 0.97rem;
+  margin-bottom: 0.9rem;
+}
+
+/* ===== Kontak ===== */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 2rem 6vw;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+/* ===== Aksesibilitas ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ===== Layar kecil ===== */
+@media (max-width: 480px) {
+  .hero { padding-top: 4rem; }
+}
+
